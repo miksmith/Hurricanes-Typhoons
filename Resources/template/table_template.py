@@ -6,15 +6,15 @@ Base = declarative_base()
 
 class Cyclone(Base):
     __tablename__ = 'cyclone'
-    hurricane_id = Column(String, primary_key=True)
-    hurricane_name = Column(String)
+    cyclone_id = Column(String, primary_key=True)
+    cyclone_name = Column(String)
     region = Column(String)
 
 
 class Measurements(Base):
     __tablename__ = 'measurements'
     status_id = Column(Integer, primary_key=True)
-    hurricane_id = Column(Integer, ForeignKey('hurricane.hurricane_id'))
+    cyclone_id = Column(Integer, ForeignKey('hurricane.hurricane_id'))
     measure_date = Column(Date)
     measure_time = Column(Time)
     event = Column(String)
