@@ -4,8 +4,8 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class Hurricane(Base):
-    __tablename__ = 'hurricane'
+class Cyclone(Base):
+    __tablename__ = 'cyclone'
     hurricane_id = Column(String, primary_key=True)
     hurricane_name = Column(String)
     region = Column(String)
