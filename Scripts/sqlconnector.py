@@ -6,7 +6,7 @@ from Resources.template.table_template import Base
 class sqliteConnector:
 
     def __init__(self):
-        self.engine = create_engine('sqlite:///Resources/database/hurricane.db')
+        self.engine = create_engine('sqlite:///Resources/database/cyclone.db')
 
     def create_tables(self):
         Base.metadata.create_all(self.engine)
