@@ -13,7 +13,7 @@ class Cyclone(Base):
 
 class Measurements(Base):
     __tablename__ = 'measurements'
-    status_id = Column(Integer, primary_key=True)
+    measurement_id = Column(Integer, primary_key=True)
     cyclone_id = Column(Integer, ForeignKey('cyclone.cyclone_id'))
     measure_date = Column(Date)
     measure_time = Column(Time)
