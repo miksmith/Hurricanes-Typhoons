@@ -18,6 +18,7 @@ class Measurements(Base):
     measure_date = Column(Date)
     measure_time = Column(Time)
     event = Column(String)
+    status = Column(String)
     latitude = Column(Float)
     longitude = Column(Float)
     max_wind = Column(Integer)
